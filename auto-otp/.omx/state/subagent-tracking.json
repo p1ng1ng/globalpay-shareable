@@ -1,0 +1,58 @@
+{
+  "schemaVersion": 1,
+  "sessions": {
+    "019f440c-753d-75e2-adb4-f1b540139523": {
+      "session_id": "019f440c-753d-75e2-adb4-f1b540139523",
+      "leader_thread_id": "019f440c-753d-75e2-adb4-f1b540139523",
+      "updated_at": "2026-07-09T00:43:26.066Z",
+      "threads": {
+        "019f440c-753d-75e2-adb4-f1b540139523": {
+          "thread_id": "019f440c-753d-75e2-adb4-f1b540139523",
+          "kind": "leader",
+          "first_seen_at": "2026-07-08T23:34:18.642Z",
+          "last_seen_at": "2026-07-09T00:43:26.066Z",
+          "last_turn_id": "019f4454-2dfc-7802-924c-5933c9c007c7",
+          "turn_count": 5
+        }
+      }
+    },
+    "019f4c88-e1d8-7081-af15-10b3d171df65": {
+      "session_id": "019f4c88-e1d8-7081-af15-10b3d171df65",
+      "leader_thread_id": "019f4c88-e1d8-7081-af15-10b3d171df65",
+      "updated_at": "2026-07-10T20:20:37.944Z",
+      "threads": {
+        "019f4c88-e1d8-7081-af15-10b3d171df65": {
+          "thread_id": "019f4c88-e1d8-7081-af15-10b3d171df65",
+          "kind": "leader",
+          "first_seen_at": "2026-07-10T15:14:30.005Z",
+          "last_seen_at": "2026-07-10T19:56:45.859Z",
+          "last_turn_id": "019f4d8f-eb45-7683-914c-078a29485873",
+          "turn_count": 10
+        },
+        "019f4da3-9454-75a3-8cbc-6e89358f4c0c": {
+          "thread_id": "019f4da3-9454-75a3-8cbc-6e89358f4c0c",
+          "kind": "subagent",
+          "first_seen_at": "2026-07-10T20:11:37.669Z",
+          "last_seen_at": "2026-07-10T20:20:37.944Z",
+          "last_turn_id": "019f4da8-9e07-75a1-b0fe-af3b487197aa",
+          "turn_count": 2
+        }
+      }
+    },
+    "019f4da3-9454-75a3-8cbc-6e89358f4c0c": {
+      "session_id": "019f4da3-9454-75a3-8cbc-6e89358f4c0c",
+      "leader_thread_id": "019f4da3-9454-75a3-8cbc-6e89358f4c0c",
+      "updated_at": "2026-07-10T20:48:41.654Z",
+      "threads": {
+        "019f4da3-9454-75a3-8cbc-6e89358f4c0c": {
+          "thread_id": "019f4da3-9454-75a3-8cbc-6e89358f4c0c",
+          "kind": "leader",
+          "first_seen_at": "2026-07-10T20:47:29.665Z",
+          "last_seen_at": "2026-07-10T20:48:41.654Z",
+          "last_turn_id": "019f4dc9-7a24-72e0-8b3f-8c87dfea1bfa",
+          "turn_count": 2
+        }
+      }
+    }
+  }
+}

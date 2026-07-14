@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(ngrok version *)",
+      "Bash(python3 -m venv .venv)",
+      "Bash(.venv/bin/pip install *)",
+      "Bash(nohup .venv/bin/python app.py)",
+      "Bash(disown)",
+      "Bash(curl -s http://127.0.0.1:5000/health)",
+      "Read(//tmp/claude-1000/**)",
+      "Bash(nohup ngrok http 5000 --log=stdout)",
+      "Bash(curl -s http://127.0.0.1:4040/api/tunnels)",
+      "Bash(python3 -c \"import json,sys; d=json.load\\(sys.stdin\\); print\\(d['tunnels'][0]['public_url']\\)\")",
+      "Bash(curl *)",
+      "Bash(chmod +x gradlew)",
+      "Bash(bash gradlew :app:assembleDebug --console=plain)"
+    ]
+  }
+}

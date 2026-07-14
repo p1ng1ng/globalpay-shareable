@@ -1,0 +1,6 @@
+{
+  "name": "Auto OTP",
+  "description": "An application that requests an OTP and automatically fills it from SMS.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

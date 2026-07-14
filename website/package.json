@@ -1,0 +1,44 @@
+{
+  "name": "Wpay",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "dev:backend": "python3 -m flask --app flask_app:app run --host=0.0.0.0 --port 5000",
+    "dev:backend:win": "python -m flask --app flask_app:app run --host=0.0.0.0 --port 5000",
+    "dev:full": "FLASK_API_BASE_URL=https://han-paleoentomological-lois.ngrok-free.dev next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint",
+    "backend:init": "python3 -m flask --app flask_app:app init-db",
+    "backend:seed": "python3 -m flask --app flask_app:app seed-dev",
+    "backend:test": "python3 -m pytest backend/tests"
+  },
+  "dependencies": {
+    "@types/jsonwebtoken": "^9.0.10",
+    "bcryptjs": "^3.0.3",
+    "jose": "^6.2.3",
+    "jsonwebtoken": "^9.0.3",
+    "lucide-react": "^1.21.0",
+    "next": "16.2.9",
+    "qrcode": "^1.5.4",
+    "react": "19.2.4",
+    "react-dom": "19.2.4",
+    "recharts": "^3.9.0",
+    "resend": "^6.12.4",
+    "speakeasy": "^2.0.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4",
+    "@types/bcryptjs": "^2.4.6",
+    "@types/node": "^20",
+    "@types/qrcode": "^1.5.6",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "@types/speakeasy": "^2.0.10",
+    "eslint": "^9",
+    "eslint-config-next": "16.2.9",
+    "tailwindcss": "^4",
+    "typescript": "^5"
+  }
+}

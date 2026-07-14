@@ -1,0 +1,541 @@
+.preview {
+  --preview-bg: #edf2ef;
+  --preview-surface: #f8fbf9;
+  --preview-strong: #ffffff;
+  --preview-text: #17211d;
+  --preview-muted: #63716b;
+  --preview-line: #d7dfda;
+  --preview-accent: #087f5b;
+  overflow: hidden;
+  border: 1px solid var(--preview-line);
+  border-radius: 8px;
+  background: var(--preview-bg);
+  color: var(--preview-text);
+  box-shadow: 0 24px 65px rgba(18, 32, 25, 0.14);
+}
+
+.preview[data-preview-theme="dark"] {
+  --preview-bg: #101613;
+  --preview-surface: #17201c;
+  --preview-strong: #1d2823;
+  --preview-text: #f2f6f4;
+  --preview-muted: #9caaa4;
+  --preview-line: #303c37;
+  box-shadow: 0 24px 65px rgba(0, 0, 0, 0.35);
+}
+
+.previewHeader {
+  min-height: 68px;
+  padding: 12px 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  border-bottom: 1px solid var(--preview-line);
+}
+
+.previewBrand,
+.previewSecure,
+.previewRequest,
+.previewField div,
+.previewPrompt,
+.previewPrompt button {
+  display: flex;
+  align-items: center;
+}
+
+.previewBrand {
+  min-width: 0;
+  gap: 10px;
+}
+
+.previewBrand strong,
+.previewBrand small {
+  display: block;
+  letter-spacing: 0;
+}
+
+.previewBrand strong {
+  font-size: 14px;
+}
+
+.previewBrand small {
+  margin-top: 2px;
+  color: var(--preview-muted);
+  font-size: 10px;
+}
+
+.previewLogo {
+  width: 40px;
+  height: 40px;
+  flex: 0 0 auto;
+  overflow: hidden;
+  border-radius: 7px;
+  border: 1px solid var(--preview-line);
+  background: var(--preview-strong);
+}
+
+.previewLogo img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: contain;
+  padding: 3px;
+}
+
+.previewSecure {
+  gap: 6px;
+  color: var(--preview-muted);
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.previewLayout {
+  min-height: 590px;
+  display: grid;
+  grid-template-columns: minmax(0, 0.82fr) minmax(390px, 1.18fr);
+}
+
+.previewSummary {
+  position: relative;
+  padding: clamp(28px, 4vw, 48px);
+  border-right: 1px solid var(--preview-line);
+  background: var(--preview-surface);
+}
+
+.previewRequest {
+  gap: 9px;
+  margin-bottom: 46px;
+  color: var(--preview-accent);
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.previewRequest span {
+  width: 38px;
+  height: 38px;
+  display: grid;
+  place-items: center;
+  border-radius: 7px;
+  background: color-mix(in srgb, var(--preview-accent) 14%, transparent);
+}
+
+.previewSummary h3,
+.previewCheckout h3 {
+  margin: 0;
+  color: var(--preview-text);
+  font-size: clamp(25px, 3vw, 34px);
+  font-weight: 820;
+  line-height: 1.12;
+  letter-spacing: 0;
+  overflow-wrap: anywhere;
+}
+
+.previewSummary > p {
+  margin: 12px 0 0;
+  color: var(--preview-muted);
+  font-size: 12px;
+}
+
+.previewSummary > p strong {
+  color: var(--preview-text);
+}
+
+.previewAmount {
+  margin-top: 24px;
+  color: var(--preview-text);
+  font-size: clamp(35px, 5vw, 52px);
+  font-weight: 850;
+  line-height: 1;
+}
+
+.previewSummary dl {
+  display: grid;
+  gap: 18px;
+  margin: 46px 0 0;
+}
+
+.previewSummary dt {
+  color: var(--preview-muted);
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.previewSummary dd {
+  margin: 4px 0 0;
+  color: var(--preview-text);
+  font-size: 12px;
+  font-weight: 750;
+}
+
+.previewTrust {
+  position: absolute;
+  right: clamp(28px, 4vw, 48px);
+  bottom: 34px;
+  left: clamp(28px, 4vw, 48px);
+  display: flex;
+  align-items: flex-start;
+  gap: 7px;
+  color: var(--preview-muted);
+  font-size: 10px;
+  line-height: 1.5;
+}
+
+.previewTrust svg {
+  flex: 0 0 auto;
+  color: var(--preview-accent);
+}
+
+.previewCheckout {
+  padding: clamp(28px, 4vw, 48px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: var(--preview-strong);
+}
+
+.previewEyebrow {
+  margin: 0 0 8px;
+  color: var(--preview-accent);
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.previewHelper {
+  margin: 13px 0 26px;
+  color: var(--preview-muted);
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.previewField {
+  display: grid;
+  gap: 8px;
+  color: var(--preview-text);
+  font-size: 12px;
+  font-weight: 750;
+}
+
+.previewField div {
+  min-height: 50px;
+  gap: 10px;
+  border: 1px solid var(--preview-line);
+  border-radius: 7px;
+  padding: 0 14px;
+  background: var(--preview-surface);
+}
+
+.previewField div strong {
+  padding-right: 10px;
+  border-right: 1px solid var(--preview-line);
+  font-size: 12px;
+}
+
+.previewField div span {
+  color: var(--preview-muted);
+  font-size: 14px;
+}
+
+.previewField small {
+  color: var(--preview-muted);
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.previewPrimary {
+  min-height: 48px;
+  margin-top: 24px;
+  border: 0;
+  border-radius: 7px;
+  background: var(--preview-accent);
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.previewTitleRow {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.previewTitleRow > span {
+  padding: 7px 9px;
+  border: 1px solid var(--preview-line);
+  border-radius: 7px;
+  color: var(--preview-muted);
+  font-family: monospace;
+  font-size: 10px;
+}
+
+.previewPrompt {
+  min-height: 96px;
+  margin-top: 22px;
+  justify-content: space-between;
+  gap: 16px;
+  border: 1px solid var(--preview-line);
+  border-radius: 7px;
+  padding: 16px;
+  background: var(--preview-surface);
+}
+
+.previewPrompt small,
+.previewPrompt strong {
+  display: block;
+}
+
+.previewPrompt small {
+  color: var(--preview-muted);
+  font-size: 10px;
+}
+
+.previewPrompt strong {
+  margin-top: 5px;
+  color: var(--preview-text);
+  font-size: 23px;
+}
+
+.previewPrompt button {
+  min-height: 40px;
+  gap: 7px;
+  border: 0;
+  border-radius: 7px;
+  padding: 0 13px;
+  background: var(--preview-text);
+  color: var(--preview-strong);
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.previewAppLabel {
+  margin: 18px 0 10px;
+  color: var(--preview-muted);
+  font-size: 10px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.previewApps,
+.previewActions {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.previewApps span,
+.previewActions button {
+  min-height: 42px;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--preview-line);
+  border-radius: 7px;
+  background: var(--preview-surface);
+  color: var(--preview-text);
+  font-size: 10px;
+  font-weight: 750;
+  text-align: center;
+}
+
+.previewActions {
+  margin-top: 12px;
+}
+
+.previewActions button {
+  background: transparent;
+  color: var(--preview-muted);
+}
+
+.previewSuccess {
+  max-width: 330px;
+  margin: auto;
+  text-align: center;
+}
+
+.previewSuccess > span {
+  width: 70px;
+  height: 70px;
+  margin: 0 auto 20px;
+  display: grid;
+  place-items: center;
+  border-radius: 8px;
+  background: color-mix(in srgb, var(--preview-accent) 14%, transparent);
+  color: var(--preview-accent);
+}
+
+.previewSuccess > p:not(.previewEyebrow) {
+  color: var(--preview-muted);
+  font-size: 12px;
+}
+
+.previewSuccess .previewPrimary {
+  width: 100%;
+}
+
+.previewFooter {
+  min-height: 38px;
+  padding: 0 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  border-top: 1px solid var(--preview-line);
+  color: var(--preview-muted);
+  font-size: 9px;
+  font-weight: 650;
+}
+
+.mobilePreview {
+  margin-top: 18px;
+  display: flex;
+  justify-content: center;
+}
+
+.mobilePreview[data-preview-theme="light"] {
+  --preview-bg: #edf2ef;
+  --preview-surface: #f8fbf9;
+  --preview-strong: #ffffff;
+  --preview-text: #17211d;
+  --preview-muted: #63716b;
+  --preview-line: #d7dfda;
+}
+
+.mobilePreview[data-preview-theme="dark"] {
+  --preview-bg: #101613;
+  --preview-surface: #17201c;
+  --preview-strong: #1d2823;
+  --preview-text: #f2f6f4;
+  --preview-muted: #9caaa4;
+  --preview-line: #303c37;
+}
+
+.mobileDevice {
+  width: min(100%, 360px);
+  overflow: hidden;
+  border: 9px solid #111827;
+  border-radius: 34px;
+  background: var(--preview-bg);
+  color: var(--preview-text);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.22);
+}
+
+.mobileHandle {
+  width: 72px;
+  height: 5px;
+  margin: 10px auto 0;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--preview-muted) 45%, transparent);
+}
+
+.mobileHeader {
+  padding: 18px 20px 12px;
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  color: var(--preview-muted);
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.mobileAmount {
+  margin: 10px 16px 12px;
+  border: 1px solid var(--preview-line);
+  border-radius: 18px;
+  padding: 20px;
+  background: var(--preview-strong);
+}
+
+.mobileAmount small,
+.mobileAmount strong {
+  display: block;
+}
+
+.mobileAmount small {
+  color: var(--preview-muted);
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.mobileAmount strong {
+  margin-top: 18px;
+  color: var(--preview-text);
+  font-size: 34px;
+  line-height: 1;
+}
+
+.mobileQrButton {
+  width: calc(100% - 32px);
+  min-height: 48px;
+  margin: 0 16px 16px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: 0;
+  border-radius: 15px;
+  background: var(--preview-accent);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 850;
+}
+
+.mobileDevice > p {
+  margin: 0 18px 10px;
+  color: var(--preview-muted);
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.mobileApps {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  padding: 0 16px 20px;
+}
+
+.mobileApps span {
+  min-height: 50px;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--preview-line);
+  border-radius: 15px;
+  background: var(--preview-strong);
+  color: var(--preview-text);
+  font-size: 13px;
+  font-weight: 850;
+  text-align: center;
+}
+
+@media (max-width: 760px) {
+  .previewSecure {
+    font-size: 0;
+  }
+
+  .previewLayout {
+    min-height: 0;
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .previewSummary {
+    min-height: 300px;
+    border-right: 0;
+    border-bottom: 1px solid var(--preview-line);
+  }
+
+  .previewRequest {
+    margin-bottom: 24px;
+  }
+
+  .previewTrust {
+    position: static;
+    margin-top: 28px;
+  }
+
+  .previewCheckout {
+    min-height: 430px;
+  }
+
+  .previewFooter span:last-child {
+    display: none;
+  }
+}

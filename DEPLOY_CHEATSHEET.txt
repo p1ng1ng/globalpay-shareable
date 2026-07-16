@@ -1,0 +1,116 @@
+==================================================================
+                    DEPLOYMENT CHEAT SHEET
+==================================================================
+
+PYTHONANYWHERE (Backend API)
+==================================================================
+
+FILES TO UPLOAD:
+Location: C:\Users\ASUS\Downloads\globalpay-shareable\pythonanywhere-ready\
+Upload to: /home/v123113456/mysite/
+
+All 15 .py files:
+✓ flask_app.py, app.py, routes.py, models.py, auth.py, config.py
+✓ extensions.py, alosheell.py, rockypayz.py, rupayex.py
+✓ merchant_webhooks.py, gateway_http.py, credential_crypto.py
+✓ wsgi.py, __init__.py
+
+INSTALL COMMAND:
+pip install --user Flask flask-cors python-dotenv SQLAlchemy Flask-SQLAlchemy Werkzeug bcrypt PyJWT requests psycopg2-binary pyotp qrcode[pil] cryptography
+
+WSGI FILE (/var/www/v123113456_pythonanywhere_com_wsgi.py):
+import sys, os
+project_home = '/home/v123113456/mysite'
+sys.path.insert(0, project_home)
+os.chdir(project_home)
+from flask_app import app as application
+
+.ENV FILE (/home/v123113456/mysite/.env):
+FLASK_ENV=production
+DATABASE_URL=sqlite:///instance/Wpay.sqlite3
+SECRET_KEY=generate-with-secrets-token-hex
+JWT_SECRET_KEY=generate-with-secrets-token-hex
+CORS_ORIGINS=*
+AUTO_INIT_DB=true
+
+RESULT: https://v123113456.pythonanywhere.com
+
+==================================================================
+
+VERCEL (Frontend Dashboard)
+==================================================================
+
+FILES TO DEPLOY:
+Location: C:\Users\ASUS\Downloads\globalpay-shareable\website\
+Deploy entire website folder (NOT backend folder inside it)
+
+VERCEL SETTINGS:
+Framework: Next.js
+Root Directory: website
+Build Command: npm run build
+Output Directory: .next
+Install Command: npm install
+Node Version: 18.x
+
+ENVIRONMENT VARIABLES (in Vercel dashboard):
+NEXT_PUBLIC_API_URL=https://v123113456.pythonanywhere.com
+NODE_ENV=production
+
+DEPLOY METHODS:
+
+Method 1 - Vercel CLI:
+  npm install -g vercel
+  cd website
+  vercel
+
+Method 2 - GitHub:
+  1. Push to GitHub
+  2. Import on vercel.com
+  3. Set root directory to "website"
+  4. Deploy
+
+RESULT: https://your-project.vercel.app
+
+==================================================================
+
+MOBILE APP (Android APK)
+==================================================================
+
+FILES: C:\Users\ASUS\Downloads\globalpay-shareable\auto-otp\
+
+UPDATE FILE: auto-otp/local.properties
+MONITORING_BASE_URL=https://v123113456.pythonanywhere.com
+
+BUILD COMMAND (in auto-otp folder):
+./gradlew assembleDebug
+
+APK LOCATION:
+auto-otp/app/build/outputs/apk/debug/app-debug.apk
+
+INSTALL:
+Copy APK to device and install
+
+==================================================================
+
+QUICK TEST COMMANDS
+==================================================================
+
+Test PythonAnywhere:
+curl https://v123113456.pythonanywhere.com
+
+Test Vercel:
+Open browser: https://your-project.vercel.app
+
+Test Mobile:
+Open app → Enter activation code → Verify
+
+==================================================================
+
+URLS SUMMARY
+==================================================================
+
+Backend API:  https://v123113456.pythonanywhere.com
+Frontend:     https://your-project.vercel.app
+Mobile:       APK on device
+
+==================================================================

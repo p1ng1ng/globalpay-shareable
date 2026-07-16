@@ -289,7 +289,6 @@ export const uiPhraseTranslations: Record<string, string> = {
   "Refunded": "已退款",
   "Success Rate": "成功率",
   "Welcome back! Here's your business overview.": "欢迎回来！这里是您的业务概览。",
-  "Loading...": "加载中...",
   "Loading merchants...": "正在加载商户...",
   "Loading dashboard...": "正在加载仪表盘...",
   "Total volume, success rate and latest payment activity.": "交易总额、成功率和最新支付活动。",

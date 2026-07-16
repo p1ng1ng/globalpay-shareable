@@ -4,56 +4,62 @@ __pycache__/
 *$py.class
 *.so
 .Python
-env/
-venv/
-.venv/
-ENV/
 *.egg-info/
-.pytest_cache/
-instance/
-*.sqlite3
-
-# Node
-node_modules/
-.next/
-out/
 dist/
-.cache/
+build/
+*.egg
+.venv/
+venv/
+ENV/
+
+# Node.js
+node_modules/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+.next/
+out/
 
-# Android/Gradle
-*.iml
+# Environment files
+.env.local
+.env.production.local
+
+# Database
+*.sqlite3
+*.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Android
+*.apk
+*.ap_
+*.dex
+*.class
+bin/
+gen/
 .gradle/
 .gradle-local/
-local.properties
-.idea/
-.DS_Store
 build/
+local.properties
+*.iml
+.DS_Store
 captures/
 .externalNativeBuild
 .cxx
 
-# Environment files
-.env
-.env.local
-.env.production
-
-# IDE
-.vscode/
-*.swp
-*.swo
-*~
+# Logs
+*.log
 
 # OS
 .DS_Store
 Thumbs.db
 
-# Logs
-*.log
-logs/
-
-# Temporary files
-*.tmp
-*.temp
+# Test files
+*_test/
+tests/
+androidTest/

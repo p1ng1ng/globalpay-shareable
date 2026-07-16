@@ -1,5 +1,6 @@
 import type { NextConfig } from "next";
 
+// Backend API URL configured via environment variable
 const flaskApiBaseUrl =
   process.env.FLASK_API_BASE_URL ||
   process.env.NEXT_PUBLIC_API_BASE_URL ||

@@ -6,7 +6,7 @@ from datetime import datetime, timezone
 
 from werkzeug.security import generate_password_hash
 
-from backend.extensions import db
+from extensions import db
 
 
 def utcnow() -> datetime:
@@ -674,12 +674,12 @@ class BankCredentialTemplate(TimestampMixin, db.Model):
         self.field_definitions = json.dumps(fields, separators=(",", ":"))
 
     def get_credentials(self) -> dict[str, str]:
-        from .credential_crypto import decrypt_credentials
+        from credential_crypto import decrypt_credentials
 
         return decrypt_credentials(self.encrypted_values)
 
     def set_credentials(self, values: dict[str, str]) -> None:
-        from .credential_crypto import encrypt_credentials
+        from credential_crypto import encrypt_credentials
 
         self.encrypted_values = encrypt_credentials(values)
 
@@ -929,12 +929,12 @@ class GatewayCredentialTemplate(TimestampMixin, db.Model):
         self.field_definitions = json.dumps(fields, separators=(",", ":"))
 
     def get_credentials(self) -> dict[str, str]:
-        from .credential_crypto import decrypt_credentials
+        from credential_crypto import decrypt_credentials
 
         return decrypt_credentials(self.encrypted_values)
 
     def set_credentials(self, values: dict[str, str]) -> None:
-        from .credential_crypto import encrypt_credentials
+        from credential_crypto import encrypt_credentials
 
         self.encrypted_values = encrypt_credentials(values)
 

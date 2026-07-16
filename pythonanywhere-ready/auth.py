@@ -9,7 +9,7 @@ import jwt
 from flask import current_app, g, jsonify, request
 from werkzeug.security import check_password_hash
 
-from backend.models import Merchant, User
+from models import Merchant, User
 
 
 COOKIE_NAMES = ("Wpay_token", "token")

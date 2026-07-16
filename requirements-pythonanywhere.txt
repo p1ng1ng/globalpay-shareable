@@ -1,0 +1,16 @@
+# Flask Backend Requirements for PythonAnywhere
+# Compatible with pre-installed dash and pyopenssl
+
+Flask<3.1
+flask-cors
+python-dotenv
+SQLAlchemy
+Flask-SQLAlchemy
+Werkzeug<3.1
+bcrypt
+PyJWT
+requests
+cryptography<45
+psycopg2-binary
+pyotp
+qrcode[pil]

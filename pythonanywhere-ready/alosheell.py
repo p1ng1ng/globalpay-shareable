@@ -7,7 +7,7 @@ from uuid import uuid4
 from urllib.error import HTTPError, URLError
 from urllib.request import Request
 
-from backend.gateway_http import open_gateway_url
+from gateway_http import open_gateway_url
 
 
 class AlosheellError(RuntimeError):

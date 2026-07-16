@@ -1,0 +1,71 @@
+==================================================================
+    PYTHONANYWHERE UPLOAD INSTRUCTIONS
+==================================================================
+
+STEP 1: Upload Files
+--------------------
+1. Go to PythonAnywhere Files tab
+2. Navigate to /home/v123113456/mysite/
+3. Upload ALL .py files from this folder (pythonanywhere-ready)
+4. Replace existing files when prompted
+
+STEP 2: Configure WSGI
+-----------------------
+1. Go to Web tab
+2. Click on your web app
+3. Find "WSGI configuration file" link
+4. Click to edit
+5. Replace entire content with content from wsgi_config.py
+6. Save (Ctrl+S)
+
+STEP 3: Create .env File
+-------------------------
+1. In Files tab, navigate to /home/v123113456/mysite/
+2. Create new file: .env
+3. Add this content:
+
+FLASK_ENV=production
+DATABASE_URL=sqlite:///instance/Wpay.sqlite3
+SECRET_KEY=your-secret-key-change-this
+JWT_SECRET_KEY=your-jwt-secret-change-this
+CORS_ORIGINS=*
+AUTO_INIT_DB=true
+
+4. Generate secret keys in Bash console:
+   python3 -c "import secrets; print(secrets.token_hex(32))"
+
+STEP 4: Install Dependencies
+-----------------------------
+Open Bash console and run:
+
+cd /home/v123113456/mysite
+pip install --user Flask flask-cors python-dotenv SQLAlchemy Flask-SQLAlchemy Werkzeug bcrypt PyJWT requests psycopg2-binary pyotp qrcode[pil] cryptography
+
+STEP 5: Reload Web App
+-----------------------
+1. Go to Web tab
+2. Click green "Reload" button
+3. Wait for reload to complete
+
+STEP 6: Test
+------------
+Visit: https://v123113456.pythonanywhere.com
+
+You should see your Flask app running!
+
+==================================================================
+TROUBLESHOOTING
+==================================================================
+
+If you see errors:
+1. Check error log in Web tab
+2. Verify all files are uploaded to /home/v123113456/mysite/
+3. Confirm WSGI file points to /home/v123113456/mysite
+4. Make sure .env file exists
+5. Check dependencies are installed
+
+Test import manually in Bash console:
+cd /home/v123113456/mysite
+python3 -c "from flask_app import app; print('SUCCESS')"
+
+==================================================================

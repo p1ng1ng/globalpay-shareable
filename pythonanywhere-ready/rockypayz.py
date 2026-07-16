@@ -7,7 +7,7 @@ from urllib.error import HTTPError, URLError
 from urllib.parse import parse_qs, urlparse
 from urllib.request import Request
 
-from backend.gateway_http import open_gateway_url
+from gateway_http import open_gateway_url
 
 
 DEFAULT_BASE_URL = "https://api.rockypayz.shop"

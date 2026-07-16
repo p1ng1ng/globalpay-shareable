@@ -8,9 +8,9 @@ from flask import Flask
 from flask_cors import CORS
 from sqlalchemy import inspect, text
 
-from backend.config import Config
-from backend.extensions import db
-from backend.models import (
+from config import Config
+from extensions import db
+from models import (
     AuditLog,
     BankCredentialTemplate,
     BankRailRoute,
@@ -37,7 +37,7 @@ from backend.models import (
     ensure_test_admin,
     utcnow,
 )
-from backend.routes import api
+from routes import api
 
 
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -296,7 +296,7 @@ def clear_merchant_data() -> dict[str, int]:
 
 
 def seed_dev_data(app: Flask) -> None:
-    from .models import Merchant, Transaction
+    from models import Merchant, Transaction
 
     with app.app_context():
         ensure_defaults(app)

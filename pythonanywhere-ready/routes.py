@@ -18,7 +18,7 @@ from werkzeug.security import generate_password_hash
 import pyotp
 import qrcode
 
-from backend.auth import (
+from auth import (
     clear_auth_cookies,
     create_token,
     current_user,
@@ -26,14 +26,14 @@ from backend.auth import (
     set_auth_cookies,
     verify_password,
 )
-from backend.extensions import db
-from backend.credential_crypto import CredentialEncryptionError
-from backend.merchant_webhooks import (
+from extensions import db
+from credential_crypto import CredentialEncryptionError
+from merchant_webhooks import (
     MerchantWebhookError,
     callback_signature,
     deliver_callback,
 )
-from backend.models import (
+from models import (
     AuditLog,
     BankCredentialTemplate,
     BankRailRoute,
@@ -62,7 +62,7 @@ from backend.models import (
     iso,
     utcnow,
 )
-from backend.rockypayz import (
+from rockypayz import (
     RockyPayzError,
     check_order_status as check_rockypayz_order_status,
     check_payout_status as check_rockypayz_payout_status,
@@ -77,7 +77,7 @@ from backend.rockypayz import (
     transaction_status as rockypayz_transaction_status,
     transaction_utr as rockypayz_transaction_utr,
 )
-from backend.rupayex import (
+from rupayex import (
     RupayExError,
     check_order_status as check_rupayex_order_status,
     check_payout_status as check_rupayex_payout_status,
@@ -93,7 +93,7 @@ from backend.rupayex import (
     transaction_status as rupayex_transaction_status,
     transaction_utr as rupayex_transaction_utr,
 )
-from backend.alosheell import (
+from alosheell import (
     AlosheellError,
     callback_amount as alosheell_callback_amount,
     client_reference as alosheell_client_reference,
